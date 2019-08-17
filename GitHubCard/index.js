@@ -35,7 +35,8 @@ axios.get('https://api.github.com/users/aaronverdine')
 const followersArray = ['tetondan', 'dustinmyers', 'justsml', 'luishrd', 'bigknell'];
 
 followersArray.forEach( item => {
-  axios.get(`https://api.github.com/users/${followersArray[]}`)
+  axios.get(`https://api.github.com/users/${item}`)
+
     .then( response => {
       cardCreator(response.data)
     })
